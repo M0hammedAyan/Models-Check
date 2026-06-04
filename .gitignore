@@ -1,0 +1,104 @@
+# Visual Studio
+
+.vs/
+
+# VS Code local settings
+
+.vscode/settings.json
+
+# Python
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+
+.venv/
+venv/
+env/
+
+# Model checkpoints
+
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+*.bin
+*.safetensors
+
+# Logs
+
+logs/
+*.log
+
+# Build
+
+build/
+dist/
+out/
+
+# Temporary
+
+tmp/
+temp/
+.cache/
+
+# Git submodules / cloned repos
+
+external_repos/
+
+# Database files
+
+*.db
+*.sqlite
+*.sqlite3
+
+# Secrets
+
+.env
+.env.*
+secrets.json
+
+# Windows
+
+Thumbs.db
+Desktop.ini
+
+# Jupyter
+
+.ipynb_checkpoints/
+
+# Generated outputs
+
+outputs/
+results/
+reports/
+exports/
+generated/
+
+# Models
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Outputs
+outputs/
+results/
+reports/
+
+# External repos
+external_repos/
+upstream_repos/
+
+# Python
+__pycache__/
+*.pyc
+
+# IDE
+.vs/
+.vscode/settings.json

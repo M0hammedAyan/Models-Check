@@ -1,0 +1,85 @@
+# Depth Estimation Benchmark Configuration - Optimized for RTX 3050 6GB
+
+data:
+  video_path: upstream_repos/Depth-Anything/assets/examples_video/davis_dolphins.mp4
+  bag_path: null
+  output_fps: 1
+  resolution: [540, 960]
+
+processing:
+  apply_temporal_refinement: false
+  temporal_window_size: 5
+  batch_size: 1
+  enable_tiling_4k: false
+  tile_size: 512
+  use_fp16: true
+
+pose:
+  enable_pose: false
+
+models:
+  bts:
+    model_type: bts
+    input_size: [384, 384]
+    use_cuda: true
+    mixed_precision: true
+  midas:
+    model_type: midas
+    input_size: [384, 384]
+    use_cuda: true
+    mixed_precision: true
+  adabins:
+    model_type: adabins
+    input_size: [384, 384]
+    use_cuda: true
+    mixed_precision: true
+  dpt_large:
+    model_type: dpt_large
+    input_size: [384, 384]
+    use_cuda: true
+    mixed_precision: true
+  iebins:
+    model_type: iebins
+    input_size: [480, 640]
+    use_cuda: true
+    mixed_precision: true
+  depth_anything_v2:
+    model_type: depth_anything_v2
+    input_size: [518, 518]
+    use_cuda: true
+    mixed_precision: true
+  unidepth:
+    model_type: unidepth
+    input_size: [224, 224]
+    use_cuda: true
+    mixed_precision: true
+  depth_anything:
+    model_type: depth_anything
+    input_size: [518, 518]
+    use_cuda: true
+    mixed_precision: true
+  metric3d:
+    model_type: metric3d
+    input_size: [480, 640]
+    use_cuda: true
+    mixed_precision: true
+  zoedepth:
+    model_type: zoedepth
+    input_size: [384, 384]
+    use_cuda: true
+    mixed_precision: false
+  depth_pro:
+    model_type: depth_pro
+    input_size: [1024, 768]
+    use_cuda: true
+    mixed_precision: true
+  depthfm:
+    model_type: depthfm
+    input_size: [384, 384]
+    use_cuda: true
+    mixed_precision: true
+
+output_dir: ./outputs
+device: cuda
+num_workers: 4
+seed: 42
